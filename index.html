@@ -3,18 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kalpvriksy Restaurant</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -24,7 +28,7 @@ body{
 
 header{
     background:#8B0000;
-    color:#fff;
+    color:white;
     padding:15px 8%;
     display:flex;
     justify-content:space-between;
@@ -36,20 +40,19 @@ header{
 
 .logo{
     font-size:28px;
-    font-weight:bold;
+    font-weight:700;
 }
 
 nav ul{
-    display:flex;
     list-style:none;
-    gap:25px;
+    display:flex;
+    gap:20px;
 }
 
 nav ul li a{
-    text-decoration:none;
     color:white;
+    text-decoration:none;
     font-weight:500;
-    transition:.3s;
 }
 
 nav ul li a:hover{
@@ -58,8 +61,12 @@ nav ul li a:hover{
 
 .hero{
     height:90vh;
-    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-    url('restaurant.jpg') center/cover no-repeat;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('restaurant.jpg');
+    background-size:cover;
+    background-position:center;
+
     display:flex;
     justify-content:center;
     align-items:center;
@@ -68,7 +75,7 @@ nav ul li a:hover{
 }
 
 .hero-content h1{
-    font-size:50px;
+    font-size:55px;
     margin-bottom:15px;
 }
 
@@ -81,16 +88,49 @@ nav ul li a:hover{
     display:inline-block;
     background:#FFD700;
     color:#000;
-    padding:14px 28px;
-    border-radius:30px;
     text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+    padding:14px 30px;
+    border-radius:30px;
+    font-weight:600;
 }
 
 .btn:hover{
     background:white;
 }
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:20px 8%;
+}
+
+.menu-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.menu-card h3{
+    margin-bottom:10px;
+}
+
+.menu-card p{
+    margin-bottom:10px;
+}
+
+.menu-card h4{
+    margin-bottom:15px;
+}
+
 </style>
 </head>
 
@@ -104,7 +144,7 @@ Kalpvriksy Restaurant
 
 <nav>
 <ul>
-<li><a href="#">Home</a></li>
+<li><a href="#home">Home</a></li>
 <li><a href="#menu">Menu</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#gallery">Gallery</a></li>
@@ -114,13 +154,15 @@ Kalpvriksy Restaurant
 
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
 
 <div class="hero-content">
 
-<h1>Welcome to Kalpvriksy Restaurant</h1>
+<h1>Welcome To Kalpvriksy Restaurant</h1>
 
-<p>Fresh Food • Great Taste • Happy Moments</p>
+<p>
+Fresh Food • Great Taste • Happy Moments
+</p>
 
 <a href="#menu" class="btn">
 Explore Menu
@@ -128,165 +170,129 @@ Explore Menu
 
 </div>
 
-  </section><!-- ===== OUR MENU SECTION ===== -->
+</section>
 
 <section id="menu">
 
-<h2 style="text-align:center; font-size:38px; margin-top:60px;">
+<h2 class="section-title">
 Our Menu
 </h2>
 
-<p style="text-align:center; margin-bottom:40px;">
+<p style="text-align:center;margin-bottom:30px;">
 Fresh & Delicious Food
 </p>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-padding:20px 8%;
-">
+<div class="menu-grid">
 
-<div style="background:#fff;padding:20px;border-radius:12px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
-
+<div class="menu-card">
 <h3>🍕 Pizza</h3>
-
 <p>Cheesy Veg Pizza</p>
-
 <h4>₹249</h4>
-
-<a href="https://wa.me/91XXXXXXXXXX" class="btn">
+<a href="https://wa.me/917352585780" class="btn">
 Order Now
 </a>
-
 </div>
 
-<div style="background:#fff;padding:20px;border-radius:12px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
-
+<div class="menu-card">
 <h3>🍔 Burger</h3>
-
 <p>Crispy Veg Burger</p>
-
 <h4>₹149</h4>
-
-<a href="https://wa.me/91XXXXXXXXXX" class="btn">
+<a href="https://wa.me/917352585780" class="btn">
 Order Now
 </a>
-
-</div>
-
-<div style="background:#fff;padding:20px;border-radius:12px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
-
+</div><div class="menu-card">
 <h3>🍝 Pasta</h3>
-
 <p>White Sauce Pasta</p>
-
 <h4>₹199</h4>
-
-<a href="https://wa.me/91XXXXXXXXXX" class="btn">
+<a href="https://wa.me/917352585780" class="btn">
 Order Now
 </a>
-
 </div>
 
-<div style="background:#fff;padding:20px;border-radius:12px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
-
+<div class="menu-card">
 <h3>🥤 Cold Coffee</h3>
-
 <p>Fresh Cold Coffee</p>
-
 <h4>₹99</h4>
-
-<a href="https://wa.me/91 7352585780" class="btn">
+<a href="https://wa.me/917352585780" class="btn">
 Order Now
 </a>
-
 </div>
 
 </div>
 
-    </section><!-- ===== ABOUT US ===== -->
+</section>
 
-<section id="about" style="padding:70px 8%; background:#fff;">
+<section id="about" style="padding:70px 8%;background:#ffffff;">
 
-<h2 style="text-align:center; font-size:38px; margin-bottom:20px;">
+<h2 class="section-title">
 About Us
 </h2>
 
-<p style="text-align:center; max-width:800px; margin:auto; line-height:1.8;">
-Welcome to <b>Kalpvriksy Restaurant</b>. We serve fresh, delicious and
-hygienic food prepared with quality ingredients. Our goal is to provide
-excellent taste, friendly service and a memorable dining experience for
-every customer.
+<p style="text-align:center;max-width:800px;margin:auto;line-height:1.8;">
+Welcome to <b>Kalpvriksy Restaurant</b>. We serve fresh,
+delicious and hygienic food prepared with quality ingredients.
+Our goal is to provide excellent taste, friendly service and a
+memorable dining experience for every customer.
 </p>
 
 </section>
 
-<!-- ===== FOOD GALLERY ===== -->
+<section id="gallery" style="padding:70px 8%;background:#fffaf5;">
 
-<section id="gallery" style="padding:70px 8%; background:#fffaf5;">
-
-<h2 style="text-align:center; font-size:38px; margin-bottom:40px;">
+<h2 class="section-title">
 Food Gallery
 </h2>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:0 8%;">
 
 <img src="food1.jpg" alt="Food 1" style="width:100%;border-radius:12px;">
-
 <img src="food2.jpg" alt="Food 2" style="width:100%;border-radius:12px;">
-
 <img src="food3.jpg" alt="Food 3" style="width:100%;border-radius:12px;">
-
 <img src="food4.jpg" alt="Food 4" style="width:100%;border-radius:12px;">
 
 </div>
 
 </section>
 
-<!-- ===== CUSTOMER REVIEWS ===== -->
+<section style="padding:70px 8%;background:#ffffff;">
 
-<section style="padding:70px 8%; background:#ffffff;">
-
-<h2 style="text-align:center; font-size:38px; margin-bottom:40px;">
+<h2 class="section-title">
 Customer Reviews
 </h2>
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
 
-<div style="background:#fffaf5;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<div class="menu-card">
 ⭐⭐⭐⭐⭐
-<p>"Amazing food and excellent service."</p>
+<p>Amazing food and excellent service.</p>
 <b>- Rahul</b>
 </div>
 
-<div style="background:#fffaf5;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<div class="menu-card">
 ⭐⭐⭐⭐⭐
-<p>"Best restaurant in the city."</p>
+<p>Best restaurant in the city.</p>
 <b>- Priya</b>
 </div>
 
-<div style="background:#fffaf5;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<div class="menu-card">
 ⭐⭐⭐⭐⭐
-<p>"Loved the taste and the atmosphere."</p>
+<p>Loved the taste and atmosphere.</p>
 <b>- Aman</b>
 </div>
 
-</div>
+    </div><section id="contact" style="padding:70px 8%;background:#8B0000;color:white;text-align:center;">
 
-</section>
+<h2 class="section-title" style="color:white;">
+Contact Us
+</h2>
 
-<!-- ===== CONTACT ===== -->
-
-<section id="contact" style="padding:70px 8%;background:#8B0000;color:white;text-align:center;">
-
-<h2>Contact Us</h2>
-
-<p>📍 Your Restaurant Address</p> marhowrah lic office 2ñd floor
+<p>📍 Marhowrah LIC Office, 2nd Floor</p>
 
 <p>📞 +91 7352585780</p>
 
-<p>✉️ youremail@gmail.com</p>
+<p>✉️ kalpvriksyrestaurant@gmail.com</p>
+
+<br>
 
 <a href="https://wa.me/917352585780" class="btn">
 Order on WhatsApp
@@ -294,47 +300,53 @@ Order on WhatsApp
 
 </section>
 
-<!-- ===== FOOTER ===== -->
-
-<footer style="background:#111;color:#fff;text-align:center;padding:20px;">
-
-<p>© 2026 Kalpvriksy Restaurant. All Rights Reserved.</p>
-
-</footer>
-
-</body>
-    </html><!-- ================= PART 4 ================= -->
-<!-- TABLE BOOKING SECTION -->
-
 <section id="booking" style="padding:70px 8%;background:#f8f8f8;">
 
-<h2 style="text-align:center;font-size:38px;margin-bottom:30px;">
+<h2 class="section-title">
 Book Your Table
 </h2>
 
 <form onsubmit="bookTable(event)"
-style="max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+style="max-width:600px;margin:auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);">
 
-<input type="text" id="name" placeholder="Full Name" required
+<input type="text"
+id="name"
+placeholder="Full Name"
+required
 style="width:100%;padding:12px;margin-bottom:15px;">
 
-<input type="tel" id="phone" placeholder="Mobile Number" required
+<input type="tel"
+id="phone"
+placeholder="Mobile Number"
+required
 style="width:100%;padding:12px;margin-bottom:15px;">
 
-<input type="number" id="persons" placeholder="Number of Persons" required
+<input type="number"
+id="persons"
+placeholder="Number of Persons"
+required
 style="width:100%;padding:12px;margin-bottom:15px;">
 
-<input type="date" id="date" required
+<input type="date"
+id="date"
+required
 style="width:100%;padding:12px;margin-bottom:15px;">
 
-<input type="time" id="time" required
+<input type="time"
+id="time"
+required
 style="width:100%;padding:12px;margin-bottom:15px;">
 
-<textarea id="message" rows="4"
+<textarea
+id="message"
+rows="4"
 placeholder="Special Request"
 style="width:100%;padding:12px;margin-bottom:15px;"></textarea>
 
-<button type="submit" class="btn" style="border:none;cursor:pointer;">
+<button
+type="submit"
+class="btn"
+style="border:none;cursor:pointer;">
 Book on WhatsApp
 </button>
 
@@ -342,11 +354,25 @@ Book on WhatsApp
 
 </section>
 
-<!-- FLOATING WHATSAPP BUTTON -->
+<footer style="background:#111;color:white;text-align:center;padding:20px;">
 
-<a href="https://wa.me/91XXXXXXXXXX"
+<p>© 2026 Kalpvriksy Restaurant. All Rights Reserved.</p>
+
+</footer>
+
+<a href="https://wa.me/917352585780"
 target="_blank"
-style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50%;font-size:26px;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:999;">
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+text-decoration:none;
+font-size:24px;
+z-index:999;">
 💬
 </a>
 
@@ -359,246 +385,52 @@ e.preventDefault();
 let name=document.getElementById("name").value;
 let phone=document.getElementById("phone").value;
 let persons=document.getElementById("persons").value;
-let date=document.getElementById("date").value;
-let time=document.getElementById("time").value;
-let message=document.getElementById("message").value;
+let date=document.get// Scroll To Top Button
 
-let text=
-"🍽️ *Kalpvriksy Restaurant Table Booking*%0A%0A"+
-"👤 Name: "+name+"%0A"+
-"📞 Mobile: "+phone+"%0A"+
-"👥 Persons: "+persons+"%0A"+
-"📅 Date: "+date+"%0A"+
-"⏰ Time: "+time+"%0A"+
-"📝 Request: "+message;
+const topBtn = document.createElement("button");
 
-window.open("https://wa.me/917352585780?text="+text,"_blank");
+topBtn.innerHTML = "↑";
 
-}
+topBtn.style.position = "fixed";
+topBtn.style.bottom = "20px";
+topBtn.style.left = "20px";
+topBtn.style.padding = "12px 16px";
+topBtn.style.background = "#8B0000";
+topBtn.style.color = "#fff";
+topBtn.style.border = "none";
+topBtn.style.borderRadius = "50%";
+topBtn.style.cursor = "pointer";
+topBtn.style.display = "none";
+topBtn.style.zIndex = "999";
 
-</script><!-- ================= PART 5 ================= -->
-<!-- CHEF SECTION -->
+document.body.appendChild(topBtn);
 
-<section style="padding:70px 8%;background:#fff;">
+window.addEventListener("scroll", function(){
 
-<h2 style="text-align:center;font-size:38px;margin-bottom:40px;">
-Our Expert Chefs
-</h2>
+if(window.scrollY>200){
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
-
-<div style="background:#fffaf5;padding:20px;border-radius:15px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
-<img src="chef1.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
-<h3>Chef Raj</h3>
-<p>Indian Cuisine Specialist</p>
-</div>
-
-<div style="background:#fffaf5;padding:20px;border-radius:15px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
-<img src="chef2.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
-<h3>Chef Aman</h3>
-<p>Chinese & Fast Food</p>
-</div>
-
-<div style="background:#fffaf5;padding:20px;border-radius:15px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
-<img src="chef3.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
-<h3>Chef Priya</h3>
-<p>Desserts & Bakery</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- GOOGLE MAP -->
-
-<section style="padding:70px 8%;background:#f8f8f8;">
-
-<h2 style="text-align:center;font-size:38px;margin-bottom:30px;">
-Find Us
-</h2>
-
-<iframe
-src="https://www.google.com/maps/embed?pb="
-width="100%"
-height="350"
-style="border:0;border-radius:15px;"
-loading="lazy">
-</iframe>
-
-</section>
-
-<!-- OPENING HOURS -->
-
-<section style="padding:70px 8%;background:#fff;">
-
-<h2 style="text-align:center;font-size:38px;margin-bottom:30px;">
-Opening Hours
-</h2>
-
-<div style="max-width:500px;margin:auto;background:#fffaf5;padding:25px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);text-align:center;">
-
-<p>Monday - Friday : 10:00 AM - 10:00 PM</p>
-<p>Saturday : 09:00 AM - 11:00 PM</p>
-<p>Sunday : 09:00 AM - 11:00 PM</p>
-
-</div>
-
-</section>
-
-<!-- NEWSLETTER -->
-
-<section style="padding:70px 8%;background:#8B0000;color:#fff;text-align:center;">
-
-<h2>Subscribe for Offers</h2>
-
-<p>Get updates about new dishes and special discounts.</p>
-
-<input type="email"
-placeholder="Enter Your Email"
-style="padding:12px;width:280px;border:none;border-radius:30px;outline:none;">
-
-<button class="btn" style="border:none;cursor:pointer;margin-left:10px;">
-Subscribe
-</button>
-
-    </section><!-- ================= PART 6 ================= -->
-
-<!-- SCROLL TO TOP BUTTON -->
-
-<button onclick="topFunction()" id="topBtn"
-style="
-display:none;
-position:fixed;
-bottom:20px;
-left:20px;
-z-index:999;
-padding:12px 16px;
-font-size:20px;
-border:none;
-border-radius:50%;
-background:#8B0000;
-color:white;
-cursor:pointer;">
-↑
-</button>
-
-<!-- FOOD SEARCH -->
-
-<section style="padding:70px 8%;background:#fff;">
-
-<h2 style="text-align:center;font-size:38px;margin-bottom:25px;">
-Search Your Favorite Food
-</h2>
-
-<div style="text-align:center;">
-<input
-type="text"
-id="foodSearch"
-placeholder="Search Food..."
-onkeyup="searchFood()"
-style="width:320px;padding:12px;border:2px solid #8B0000;border-radius:30px;">
-</div>
-
-</section>
-
-<!-- IMAGE SLIDER -->
-
-<section style="padding:60px 8%;text-align:center;">
-
-<img id="slider"
-src="food1.jpg"
-style="width:100%;max-width:900px;height:450px;object-fit:cover;border-radius:15px;">
-
-</section>
-
-<!-- LOADING MESSAGE -->
-
-<div id="loading"
-style="
-display:none;
-text-align:center;
-padding:20px;
-font-size:20px;
-font-weight:bold;">
-Loading...
-</div>
-
-<script>
-
-// Scroll Button
-
-let topButton=document.getElementById("topBtn");
-
-window.onscroll=function(){
-
-if(document.documentElement.scrollTop>200){
-
-topButton.style.display="block";
+topBtn.style.display="block";
 
 }else{
 
-topButton.style.display="none";
+topBtn.style.display="none";
 
 }
 
-}
+});
 
-function topFunction(){
+topBtn.onclick=function(){
 
 window.scrollTo({
+
 top:0,
 behavior:"smooth"
-});
-
-}
-
-// Food Search
-
-function searchFood(){
-
-let input=document.getElementById("foodSearch").value.toLowerCase();
-
-let cards=document.querySelectorAll("#menu div div");
-
-cards.forEach(function(card){
-
-if(card.innerText.toLowerCase().includes(input)){
-
-card.style.display="block";
-
-}else{
-
-card.style.display="none";
-
-}
 
 });
 
-}
-
-// Image Slider
-
-let images=[
-"food1.jpg",
-"food2.jpg",
-"food3.jpg",
-"food4.jpg"
-];
-
-let index=0;
-
-setInterval(function(){
-
-index++;
-
-if(index>=images.length){
-
-index=0;
-
-}
-
-document.getElementById("slider").src=images[index];
-
-},3000);
+};
 
 </script>
+
+</body>
+</html>
