@@ -303,4 +303,302 @@ Order on WhatsApp
 </footer>
 
 </body>
-    </html>
+    </html><!-- ================= PART 4 ================= -->
+<!-- TABLE BOOKING SECTION -->
+
+<section id="booking" style="padding:70px 8%;background:#f8f8f8;">
+
+<h2 style="text-align:center;font-size:38px;margin-bottom:30px;">
+Book Your Table
+</h2>
+
+<form onsubmit="bookTable(event)"
+style="max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+
+<input type="text" id="name" placeholder="Full Name" required
+style="width:100%;padding:12px;margin-bottom:15px;">
+
+<input type="tel" id="phone" placeholder="Mobile Number" required
+style="width:100%;padding:12px;margin-bottom:15px;">
+
+<input type="number" id="persons" placeholder="Number of Persons" required
+style="width:100%;padding:12px;margin-bottom:15px;">
+
+<input type="date" id="date" required
+style="width:100%;padding:12px;margin-bottom:15px;">
+
+<input type="time" id="time" required
+style="width:100%;padding:12px;margin-bottom:15px;">
+
+<textarea id="message" rows="4"
+placeholder="Special Request"
+style="width:100%;padding:12px;margin-bottom:15px;"></textarea>
+
+<button type="submit" class="btn" style="border:none;cursor:pointer;">
+Book on WhatsApp
+</button>
+
+</form>
+
+</section>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a href="https://wa.me/91XXXXXXXXXX"
+target="_blank"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50%;font-size:26px;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:999;">
+💬
+</a>
+
+<script>
+
+function bookTable(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let persons=document.getElementById("persons").value;
+let date=document.getElementById("date").value;
+let time=document.getElementById("time").value;
+let message=document.getElementById("message").value;
+
+let text=
+"🍽️ *Kalpvriksy Restaurant Table Booking*%0A%0A"+
+"👤 Name: "+name+"%0A"+
+"📞 Mobile: "+phone+"%0A"+
+"👥 Persons: "+persons+"%0A"+
+"📅 Date: "+date+"%0A"+
+"⏰ Time: "+time+"%0A"+
+"📝 Request: "+message;
+
+window.open("https://wa.me/917352585780?text="+text,"_blank");
+
+}
+
+</script><!-- ================= PART 5 ================= -->
+<!-- CHEF SECTION -->
+
+<section style="padding:70px 8%;background:#fff;">
+
+<h2 style="text-align:center;font-size:38px;margin-bottom:40px;">
+Our Expert Chefs
+</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
+
+<div style="background:#fffaf5;padding:20px;border-radius:15px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<img src="chef1.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+<h3>Chef Raj</h3>
+<p>Indian Cuisine Specialist</p>
+</div>
+
+<div style="background:#fffaf5;padding:20px;border-radius:15px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<img src="chef2.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+<h3>Chef Aman</h3>
+<p>Chinese & Fast Food</p>
+</div>
+
+<div style="background:#fffaf5;padding:20px;border-radius:15px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<img src="chef3.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+<h3>Chef Priya</h3>
+<p>Desserts & Bakery</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GOOGLE MAP -->
+
+<section style="padding:70px 8%;background:#f8f8f8;">
+
+<h2 style="text-align:center;font-size:38px;margin-bottom:30px;">
+Find Us
+</h2>
+
+<iframe
+src="https://www.google.com/maps/embed?pb="
+width="100%"
+height="350"
+style="border:0;border-radius:15px;"
+loading="lazy">
+</iframe>
+
+</section>
+
+<!-- OPENING HOURS -->
+
+<section style="padding:70px 8%;background:#fff;">
+
+<h2 style="text-align:center;font-size:38px;margin-bottom:30px;">
+Opening Hours
+</h2>
+
+<div style="max-width:500px;margin:auto;background:#fffaf5;padding:25px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);text-align:center;">
+
+<p>Monday - Friday : 10:00 AM - 10:00 PM</p>
+<p>Saturday : 09:00 AM - 11:00 PM</p>
+<p>Sunday : 09:00 AM - 11:00 PM</p>
+
+</div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section style="padding:70px 8%;background:#8B0000;color:#fff;text-align:center;">
+
+<h2>Subscribe for Offers</h2>
+
+<p>Get updates about new dishes and special discounts.</p>
+
+<input type="email"
+placeholder="Enter Your Email"
+style="padding:12px;width:280px;border:none;border-radius:30px;outline:none;">
+
+<button class="btn" style="border:none;cursor:pointer;margin-left:10px;">
+Subscribe
+</button>
+
+    </section><!-- ================= PART 6 ================= -->
+
+<!-- SCROLL TO TOP BUTTON -->
+
+<button onclick="topFunction()" id="topBtn"
+style="
+display:none;
+position:fixed;
+bottom:20px;
+left:20px;
+z-index:999;
+padding:12px 16px;
+font-size:20px;
+border:none;
+border-radius:50%;
+background:#8B0000;
+color:white;
+cursor:pointer;">
+↑
+</button>
+
+<!-- FOOD SEARCH -->
+
+<section style="padding:70px 8%;background:#fff;">
+
+<h2 style="text-align:center;font-size:38px;margin-bottom:25px;">
+Search Your Favorite Food
+</h2>
+
+<div style="text-align:center;">
+<input
+type="text"
+id="foodSearch"
+placeholder="Search Food..."
+onkeyup="searchFood()"
+style="width:320px;padding:12px;border:2px solid #8B0000;border-radius:30px;">
+</div>
+
+</section>
+
+<!-- IMAGE SLIDER -->
+
+<section style="padding:60px 8%;text-align:center;">
+
+<img id="slider"
+src="food1.jpg"
+style="width:100%;max-width:900px;height:450px;object-fit:cover;border-radius:15px;">
+
+</section>
+
+<!-- LOADING MESSAGE -->
+
+<div id="loading"
+style="
+display:none;
+text-align:center;
+padding:20px;
+font-size:20px;
+font-weight:bold;">
+Loading...
+</div>
+
+<script>
+
+// Scroll Button
+
+let topButton=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>200){
+
+topButton.style.display="block";
+
+}else{
+
+topButton.style.display="none";
+
+}
+
+}
+
+function topFunction(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+// Food Search
+
+function searchFood(){
+
+let input=document.getElementById("foodSearch").value.toLowerCase();
+
+let cards=document.querySelectorAll("#menu div div");
+
+cards.forEach(function(card){
+
+if(card.innerText.toLowerCase().includes(input)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+
+// Image Slider
+
+let images=[
+"food1.jpg",
+"food2.jpg",
+"food3.jpg",
+"food4.jpg"
+];
+
+let index=0;
+
+setInterval(function(){
+
+index++;
+
+if(index>=images.length){
+
+index=0;
+
+}
+
+document.getElementById("slider").src=images[index];
+
+},3000);
+
+</script>
